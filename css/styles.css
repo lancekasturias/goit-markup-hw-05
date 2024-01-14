@@ -84,6 +84,23 @@ body {
   padding: 24px 0;
 }
 
+.active {
+  color: var(--Ocean);
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 4px;
+  background-color: var(--Ocean);
+  border-radius: 2px;
+  width: 100%;
+}
+
 .item {
   font-size: 16px;
   line-height: 1.5;
@@ -131,7 +148,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1440px;
+  max-width: 1440px, 1440px;
 }
 
 .icon-container {
@@ -159,6 +176,7 @@ body {
   border-radius: 4px;
   display: block;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:hover,
@@ -312,6 +330,7 @@ body {
   border-radius: 50%;
   display: flex;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socmed-link:hover,
